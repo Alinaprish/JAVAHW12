@@ -30,8 +30,10 @@ public class PosterManagerTestFindLast {
     @Test
     public void test() {
 
+        man.setResultLength(5);
+
         PosterObject[] expected = {object7, object6, object5, object4, object3};
-        PosterObject[] actual = man.findLast(5);
+        PosterObject[] actual = man.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
 
@@ -40,8 +42,10 @@ public class PosterManagerTestFindLast {
     @Test
     public void testtwo() {
 
+        man.setResultLength(7);
+
         PosterObject[] expected = {object7, object6, object5, object4, object3, object2, object1};
-        PosterObject[] actual = man.findLast(12);
+        PosterObject[] actual = man.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
 

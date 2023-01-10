@@ -51,7 +51,7 @@ public class PosterManager {
         return reversed;
     }
 
-    public PosterObject[] findLast(int limit) {
+    public PosterObject[] findLast() {
         int resultLength;
         if (objects.length < limit) {
             resultLength = objects.length;
