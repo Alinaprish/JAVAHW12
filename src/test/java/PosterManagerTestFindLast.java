@@ -39,8 +39,33 @@ public class PosterManagerTestFindLast {
 
     }
 
+
     @Test
-    public void testtwo() {
+    public void testFree() {
+
+        man.setResultLength(10);
+
+        PosterObject[] expected = {object7, object6, object5, object4, object3, object2, object1};
+        PosterObject[] actual = man.findLast();
+
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
+
+    @Test
+    public void testMoreLimit() {
+
+        man.setResultLength(3);
+
+        PosterObject[] expected = {object7, object6, object5};
+        PosterObject[] actual = man.findLast();
+
+        Assertions.assertArrayEquals(expected, actual);
+
+    }
+
+    @Test
+    public void testIsLimit() {
 
         man.setResultLength(7);
 
